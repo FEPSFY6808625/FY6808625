@@ -46,6 +46,9 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     .mySlides {display:none;}
+
+    /* Style to center the image */
+    #
   </style>
   <body>
       <body style="background-color:#FFFFFF;margin-left:50px;margin-right:50px">
@@ -240,9 +243,58 @@
             Koh, D.H., Jang, W.S., Park, J.W., Ham, W.S., Han, W.K., Rha, K.H. and Choi, Y.D. (2018). <i>Efficacy and Safety of Robotic Procedures Performed Using the da Vinci Robotic Surgical System at a Single Institute 
           in Korea: Experience with 10000 Cases.</i> Yonsei Medical Journal, 59(8), p.975. Available at: <a href="https://doi.org/10.3349/ymj.2018.59.8.975">https://doi.org/10.3349/ymj.2018.59.8.975.</a>
         </p>
-     
 
-        
+
+
+        <h2>Conference Presentation: Artificial Intelligence in Medicine</h2>
+
+        <script>
+          // Array of slide image URLs
+          var slideImages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png"];
+          var currentSlide = 0;
+
+          function showSlide() {
+            document.getElementById('slide').src = slideImages[currentSlide];
+          }
+
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideImages.length;
+            showSlide();
+          }
+
+          function prevSlide() {
+            currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+            showSlide();
+          }
+
+          // Function to show a specific slide based on the button clicked
+          function showSlideNumber(slideNumber) {
+            currentSlide = slideNumber - 1;
+            showSlide();
+          }
+
+          // Call showSlide() to display the first slide
+          showSlide();
+          
+        </script>
+
+        <div id="slide-container">
+          <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+          
+     <!-- Previous and Next buttons container -->
+          <div class="button-container">
+            <button class="button" onclick="prevSlide()">Previous</button>
+            <button class="button" onclick="nextSlide()">Next</button>
+          </div>
+
+          <!-- Slide number buttons container -->
+          <div class="slide-number-container">
+            <button class="button" onclick="showSlideNumber(1)">1</button>
+            <button class="button" onclick="showSlideNumber(2)">2</button>
+            <button class="button" onclick="showSlideNumber(3)">3</button>
+            <button class="button" onclick="showSlideNumber(4)">4</button>
+          </div>
+    
 
 
 
